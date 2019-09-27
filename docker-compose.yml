@@ -14,8 +14,8 @@ services:
     volumes:
       - .:/app
     ports:
-      - 8080:8080
-    command: mvn clean spring-boot:run
+      - 80:80
+    command: mvn -Pprod clean spring-boot:run
     depends_on:
       - mongodb
     restart: always
