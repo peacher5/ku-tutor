@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: @activatedProperties@
+tutor:
+  ios:
+    client-id: 1011580347750-c8lobdid5g73gujjpm00jgj2gm5u9sb3.apps.googleusercontent.com

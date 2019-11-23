@@ -1,0 +1,8 @@
+server:
+  port: 5000
+spring:
+  data:
+    mongodb:
+      host: 158.108.30.232
+      port: 27017
+      database: tutor
