@@ -1,6 +1,7 @@
 package th.ac.ku.tutor.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import th.ac.ku.tutor.service.AuthService;
@@ -24,6 +25,10 @@ public class AuthController {
         }
 
         String token = service.auth(idToken);
+
+        if (token == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
 
         HashMap<String, String> tokenJson = new HashMap<>();
         tokenJson.put("token", token);

@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import th.ac.ku.tutor.model.User;
 
 @RestController
-@RequestMapping("/user")
 public class UserController {
+@RequestMapping("/user")
     @GetMapping
     public User getUser(@RequestAttribute User user) {
         return user;
