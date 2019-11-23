@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import th.ac.ku.tutor.model.User;
 import th.ac.ku.tutor.repository.UserRepository;
 
-
 @Service
 public class UserService {
     private UserRepository userRepository;

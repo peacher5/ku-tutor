@@ -24,5 +24,5 @@ public class User {
     private String lastName;
 
     @NonNull
-    private String nickName;
+    private String nickname;
 }
