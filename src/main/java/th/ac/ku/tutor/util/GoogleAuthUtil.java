@@ -18,21 +18,24 @@ public class GoogleAuthUtil {
 
     private JacksonFactory jacksonFactory = new JacksonFactory();
     private NetHttpTransport netHttpTransport = new NetHttpTransport();
-    private GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(netHttpTransport, jacksonFactory)
-            .setAudience(Collections.singletonList(iosClientId))
-            .build();
 
     public String getEmail(String idToken) throws IllegalArgumentException {
+        GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(netHttpTransport, jacksonFactory)
+                .setAudience(Collections.singletonList(iosClientId))
+                .build();
+
         GoogleIdToken googleIdToken;
 
         try {
             googleIdToken = verifier.verify(idToken);
+            System.out.println("Google: " + googleIdToken);
         } catch (GeneralSecurityException | IOException e) {
             throw new IllegalArgumentException("Invalid ID token.");
         }
 
         if (googleIdToken != null) {
             GoogleIdToken.Payload payload = googleIdToken.getPayload();
+            System.out.println(payload);
             return payload.getEmail();
         }
 
