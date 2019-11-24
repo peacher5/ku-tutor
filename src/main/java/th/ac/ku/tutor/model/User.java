@@ -26,7 +26,7 @@ public class User {
     private String lastName;
 
     @NonNull
-    private String nickname;
+    private String nickName;
 
     @NotNull
     private String studentID;
