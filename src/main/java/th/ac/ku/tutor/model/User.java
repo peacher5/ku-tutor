@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import javax.validation.constraints.NotNull;
 
 @Data
-@Document(collection = "User")
+@Document
 public class User {
     @Id
     private String id;
