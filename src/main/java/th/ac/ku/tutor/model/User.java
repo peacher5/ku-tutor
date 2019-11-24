@@ -11,7 +11,6 @@ import javax.validation.constraints.NotNull;
 @Data
 @Document(collection = "User")
 public class User {
-
     @Id
     private String id;
 
@@ -26,10 +25,10 @@ public class User {
     private String lastName;
 
     @NonNull
-    private String nickName;
+    private String nickname;
 
     @NotNull
-    private String studentID;
+    private String studentId;
 
     @NotNull
     private String campus;
@@ -41,9 +40,5 @@ public class User {
     private String department;
 
     @NotNull
-    private String kuGen;
-
-    @NotNull
-    private String picUrl;
-
+    private String pictureUrl;
 }

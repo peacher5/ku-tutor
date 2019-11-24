@@ -8,7 +8,6 @@ import th.ac.ku.tutor.service.UserService;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
     private UserService userService;
 
     @Autowired
