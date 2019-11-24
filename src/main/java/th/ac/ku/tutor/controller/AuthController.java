@@ -35,4 +35,13 @@ public class AuthController {
 
         return ResponseEntity.ok(tokenJson);
     }
+
+    @GetMapping("/token")
+    public ResponseEntity token(@RequestHeader("X-Token") String token) {
+        if (service.isTokenValid(token)) {
+            return ResponseEntity.notFound().build();
+        } else {
+            return ResponseEntity.ok().build();
+        }
+    }
 }
