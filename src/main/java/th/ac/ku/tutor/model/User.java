@@ -43,4 +43,7 @@ public class User {
     @NotNull
     private String kuGen;
 
+    @NotNull
+    private String picUrl;
+
 }
