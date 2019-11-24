@@ -26,4 +26,8 @@ public class AuthService {
         }
         return TokenStore.getInstance().generateToken(email);
     }
+
+    public boolean isTokenValid(String token) {
+        return TokenStore.getInstance().getEmail(token) != null;
+    }
 }
