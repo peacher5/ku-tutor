@@ -17,4 +17,6 @@ public class Post {
     private String content;
 
     private String coverPictureUrl;
+
+    private String ownerId;
 }

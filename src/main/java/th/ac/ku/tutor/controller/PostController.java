@@ -3,6 +3,7 @@ package th.ac.ku.tutor.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import th.ac.ku.tutor.model.Post;
+import th.ac.ku.tutor.model.User;
 import th.ac.ku.tutor.service.PostService;
 
 import java.util.List;
@@ -18,7 +19,8 @@ public class PostController {
     }
 
     @PostMapping
-    public Post postPost(@RequestBody Post post) {
+    public Post postPost(@RequestBody Post post, @RequestAttribute User user) {
+        post.setOwnerId(user.getId());
         return postService.createPost(post);
     }
 
