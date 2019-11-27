@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import th.ac.ku.tutor.model.User;
 import th.ac.ku.tutor.repository.UserRepository;
 
+import java.util.List;
+
 @Service
 public class UserService {
     private UserRepository userRepository;
@@ -16,6 +18,8 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public List<User> getAllUser() { return userRepository.findAll(); }
+
     public User getUserFromEmail(String email) {
         return userRepository.findByEmail(email);
     }
@@ -24,8 +28,4 @@ public class UserService {
         return userRepository.insert(user);
     }
 
-    public boolean deleteUser(User user) {
-        userRepository.delete(user);
-        return true;
-    }
 }
