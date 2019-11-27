@@ -6,10 +6,9 @@ import th.ac.ku.tutor.model.Post;
 import th.ac.ku.tutor.service.PostService;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
-@RequestMapping("/post")
+@RequestMapping("/posts")
 public class PostController {
     private PostService postService;
 
