@@ -26,4 +26,9 @@ public class PostService {
 
     public Optional<Post> getPostById(String id) { return postRepository.findById(id); }
 
+    public boolean deletePostById(String id) {
+        postRepository.deleteById(id);
+        return true;
+    }
+
 }

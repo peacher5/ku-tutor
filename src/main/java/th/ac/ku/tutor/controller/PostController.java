@@ -32,4 +32,10 @@ public class PostController {
     public Optional<Post> findPostById(@RequestParam String id) {
         return postService.getPostById(id);
     }
+
+    @DeleteMapping
+    public boolean deletePostById(@RequestParam String id) {
+        postService.deletePostById(id);
+        return true;
+    }
 }
