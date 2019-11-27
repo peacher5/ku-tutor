@@ -24,7 +24,7 @@ public class UserController {
         System.out.println(user);
         String email = TokenStore.getInstance().getEmail(token);
 
-        if (email == null) {
+        if (email == null || !email.endsWith("ku.th")) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
 
