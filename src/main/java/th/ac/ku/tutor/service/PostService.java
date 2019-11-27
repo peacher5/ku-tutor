@@ -24,7 +24,7 @@ public class PostService {
 
     public List<Post> getPost() { return postRepository.findAll(); }
 
-    public Optional<Post> getPostById(String id) { return postRepository.findById(id); }
+    public Post getPostById(String id) { return postRepository.findById(id).get(); }
 
     public boolean deletePostById(String id) {
         postRepository.deleteById(id);

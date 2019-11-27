@@ -29,7 +29,7 @@ public class PostController {
     }
 
     @GetMapping
-    public Optional<Post> findPostById(@RequestParam String id) {
+    public Post findPostById(@RequestParam String id) {
         return postService.getPostById(id);
     }
 
