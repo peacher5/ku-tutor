@@ -32,7 +32,7 @@ public class PostServiceTest {
         post1.setTitle("รับสอน python");
         post1.setDescription("สอนวันจันทร์-ศุกร์ 17.00-18.00น.");
         post1.setContent("สอนพื้นฐานทั้งหมด");
-        post1.setCoverPictureUrl("www.sagame66.com");
+        post1.setCoverPictureUrl("https://lh3.googleusercontent.com/a-/AAuE7mAj5i8HgJMrgjUhAfKc6p7TqvCqTl_NeeGBw0cy=s500");
         list.add(post1);
 
         Post post2 = new Post();
@@ -40,7 +40,7 @@ public class PostServiceTest {
         post2.setTitle("รับสอนภาษาC");
         post2.setDescription("สอนวันจันทร์ 17.00-18.00น.");
         post2.setContent("สอนพื้นฐานทั้งหมด");
-        post2.setCoverPictureUrl("www.ufa191.com");
+        post2.setCoverPictureUrl("https://lh3.googleusercontent.com/a-/AAuE7mAj5i8HgJMrgjUhAfKc6p7TqvCqTl_NeeGBw0cy=s500");
         list.add(post2);
 
         when(postService.getPost()).thenReturn(list);
@@ -60,7 +60,7 @@ public class PostServiceTest {
         assertEquals("รับสอน python", post.getTitle());
         assertEquals("สอนวันจันทร์-ศุกร์ 17.00-18.00น.", post.getDescription());
         assertEquals("สอนพื้นฐานทั้งหมด", post.getContent());
-        assertEquals("www.sagame66.com", post.getCoverPictureUrl());
+        assertEquals("https://lh3.googleusercontent.com/a-/AAuE7mAj5i8HgJMrgjUhAfKc6p7TqvCqTl_NeeGBw0cy=s500", post.getCoverPictureUrl());
     }
 
     @Test
@@ -70,7 +70,7 @@ public class PostServiceTest {
         post.setTitle("รับสอนภาษาC++");
         post.setDescription("สอนวันจันทร์-พุธ 17.00-18.00น.");
         post.setContent("สอนพื้นฐานทั้งหมด");
-        post.setCoverPictureUrl("www.sexygame66.com");
+        post.setCoverPictureUrl("https://lh3.googleusercontent.com/a-/AAuE7mAj5i8HgJMrgjUhAfKc6p7TqvCqTl_NeeGBw0cy=s500");
         postService.createPost(post);
         verify(postService, times(1)).createPost(post);
     }

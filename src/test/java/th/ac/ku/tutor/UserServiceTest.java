@@ -38,7 +38,7 @@ public class UserServiceTest {
         user1.setFaculty("SC");
         user1.setDepartment("CS");
         user1.setAboutMe("Hi");
-        user1.setPictureUrl("www.ufa191.com");
+        user1.setPictureUrl("https://lh3.googleusercontent.com/a-/AAuE7mAj5i8HgJMrgjUhAfKc6p7TqvCqTl_NeeGBw0cy=s500");
         list.add(user1);
 
         User user2 = new User();
@@ -52,7 +52,7 @@ public class UserServiceTest {
         user2.setFaculty("SC");
         user2.setDepartment("CS");
         user2.setAboutMe("Hi");
-        user2.setPictureUrl("www.sagame66.com");
+        user2.setPictureUrl("https://lh3.googleusercontent.com/a-/AAuE7mAj5i8HgJMrgjUhAfKc6p7TqvCqTl_NeeGBw0cy=s500");
         list.add(user2);
 
         when(userService.getAllUser()).thenReturn(list);
@@ -77,7 +77,7 @@ public class UserServiceTest {
         assertEquals("SC", user.getFaculty());
         assertEquals("CS", user.getDepartment());
         assertEquals("Hi", user.getAboutMe());
-        assertEquals("www.sagame66.com",user.getPictureUrl());
+        assertEquals("https://lh3.googleusercontent.com/a-/AAuE7mAj5i8HgJMrgjUhAfKc6p7TqvCqTl_NeeGBw0cy=s500",user.getPictureUrl());
     }
 
     @Test
@@ -93,7 +93,7 @@ public class UserServiceTest {
         user.setFaculty("SC");
         user.setDepartment("CS");
         user.setAboutMe("Hi");
-        user.setPictureUrl("www.sexygame66.com");
+        user.setPictureUrl("https://lh3.googleusercontent.com/a-/AAuE7mAj5i8HgJMrgjUhAfKc6p7TqvCqTl_NeeGBw0cy=s500");
         userService.createUser(user);
         verify(userService, times(1)).createUser(user);
     }
