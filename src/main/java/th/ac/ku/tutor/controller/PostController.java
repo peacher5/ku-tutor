@@ -27,8 +27,8 @@ public class PostController {
         return postService.getPost();
     }
 
-    @GetMapping
-    public Post findPostById(@RequestParam String id) {
+    @GetMapping("/{id}")
+    public Post findPostById(@PathVariable String id) {
         return postService.getPostById(id);
     }
 
