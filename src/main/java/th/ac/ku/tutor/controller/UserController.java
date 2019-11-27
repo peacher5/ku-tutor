@@ -34,11 +34,6 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
-    @DeleteMapping
-    public boolean deleteUser(@RequestBody User user) {
-        return userService.deleteUser(user);
-    }
-
     @GetMapping
     public User getUser(@RequestAttribute User user) {
         return user;

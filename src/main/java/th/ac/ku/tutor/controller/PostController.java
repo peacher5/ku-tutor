@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.*;
 import th.ac.ku.tutor.model.Post;
 import th.ac.ku.tutor.service.PostService;
 
+import java.util.List;
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/post")
 public class PostController {
@@ -15,8 +18,24 @@ public class PostController {
         this.postService = postService;
     }
 
-    @PostMapping("/create")
+    @PostMapping
     public Post postPost(@RequestBody Post post) {
         return postService.createPost(post);
+    }
+
+    @GetMapping
+    public List<Post> findAllPost() {
+        return postService.getPost();
+    }
+
+    @GetMapping
+    public Post findPostById(@RequestParam String id) {
+        return postService.getPostById(id);
+    }
+
+    @DeleteMapping
+    public boolean deletePostById(@RequestParam String id) {
+        postService.deletePostById(id);
+        return true;
     }
 }
