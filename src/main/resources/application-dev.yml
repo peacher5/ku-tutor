@@ -3,6 +3,6 @@ server:
 spring:
   data:
     mongodb:
-      host: 158.108.30.132
+      host: 158.108.30.157
       port: 27017
       database: tutor
