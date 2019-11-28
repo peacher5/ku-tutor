@@ -2,12 +2,14 @@ package th.ac.ku.tutor.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import th.ac.ku.tutor.interceptor.AuthInterceptor;
 
 @Configuration
+@EnableRedisRepositories
 public class WebConfig implements WebMvcConfigurer {
     private AuthInterceptor authInterceptor;
 
